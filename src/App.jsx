@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom'
 import { Footer, Navbar } from './components'
 import { Home, PropertyDetail, Search } from './pages'
+import './App.css'
 
 function App() {
   return (
