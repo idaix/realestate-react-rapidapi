@@ -1,0 +1,39 @@
+import { Link } from 'react-router-dom'
+import { Badge } from '../components'
+import {MdOutlineBathtub} from 'react-icons/md'
+import {TbBed} from 'react-icons/tb'
+import {GoVerified} from 'react-icons/go'
+
+const PropertyCard = ({ title, rooms, price, isVerified, baths, agency, coverPhoto, externalID, rentFrequency }) => {
+    console.log(agency);
+  return (
+    <Link to={`property/${externalID}`}>
+        <div className='rounded bg-white hover:bg-primary-light duration-300 overflow-hidden'>
+            <figure className="w-full md:h-44 overflow-hidden">
+                <img src={coverPhoto?.url} alt={title} className='w-full object-cover' />
+            </figure>
+            <div className='p-2'>
+                <div className="flex items-center">
+                    <div className="flex-1 flex gap-1 items-center">
+                        {isVerified&&(
+                            <GoVerified className='text-primary' />
+                        )}
+                        <h3 className='text-lg font-semibold'>AED {price} {rentFrequency&& `/ ${rentFrequency}`}</h3>
+                    </div>
+                    <div className='overflow-hidden w-12 h-12 rounded-full'>
+                        <img src={agency?.logo?.url} alt={agency.name} className='w-full h-full object-cover' />
+                    </div>
+                </div>
+                <div className="flex items-center gap-2 my-2">
+                    <Badge css='bg-primary text-white flex items-center gap-1'>< TbBed className='text-lg'/> {rooms} Rooms</Badge>
+                    <Badge css='bg-primary text-white flex items-center gap-1'>< MdOutlineBathtub className='text-lg'/> {baths} Baths </Badge>
+                </div>
+                    
+                <p>{title.length > 30 ? title.substring(0, 30) + '...' : title}</p>
+            </div>
+        </div>
+    </Link>
+  )
+}
+
+export default PropertyCard
