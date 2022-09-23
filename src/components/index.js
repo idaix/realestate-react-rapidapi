@@ -6,6 +6,7 @@ export { default as Logo } from './Logo'
 export { default as Button } from './Button'
 export { default as Section } from './Section'
 export { default as Badge } from './Badge'
+export { default as Select } from './Select'
 //  All pages Components
 export { default as Properties } from './Properties'
 export { default as PropertyCard } from './PropertyCard'

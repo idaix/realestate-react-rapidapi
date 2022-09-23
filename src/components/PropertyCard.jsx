@@ -6,9 +6,8 @@ import { GoVerified } from 'react-icons/go'
 import { BsBoundingBoxCircles } from 'react-icons/bs'
 import millify from 'millify'
 const PropertyCard = ({ title, rooms, price, isVerified, baths, agency, coverPhoto, externalID, rentFrequency, area }) => {
-    console.log(agency);
   return (
-    <Link to={`property/${externalID}`}>
+    <Link to={`/property/${externalID}`}>
         <div className='rounded bg-white hover:bg-primary-light duration-300 overflow-hidden'>
             <figure className="w-full md:h-44 xl:h-60 overflow-hidden">
                 <img src={coverPhoto?.url} alt={title} loading="lazy" className='w-full object-cover' />
