@@ -11,7 +11,7 @@ const PropertyCard = ({ title, rooms, price, isVerified, baths, agency, coverPho
     <Link to={`property/${externalID}`}>
         <div className='rounded bg-white hover:bg-primary-light duration-300 overflow-hidden'>
             <figure className="w-full md:h-44 xl:h-60 overflow-hidden">
-                <img src={coverPhoto?.url} alt={title} className='w-full object-cover' />
+                <img src={coverPhoto?.url} alt={title} loading="lazy" className='w-full object-cover' />
             </figure>
             <div className='p-2'>
                 <div className="flex items-center">
