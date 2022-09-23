@@ -9,5 +9,6 @@ export { default as Badge } from './Badge'
 //  All pages Components
 export { default as Properties } from './Properties'
 export { default as PropertyCard } from './PropertyCard'
+export { default as SearchFilter } from './SearchFilter'
 // Home Componets
 export { default as ExploreBanner } from './Home/ExploreBanner'

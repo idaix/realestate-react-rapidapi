@@ -17,13 +17,13 @@ const Navbar = () => {
               <Link to="/" className="block py-1 hover:text-primary">Home</Link>
             </li>
             <li onClick={handleClick}>
-              <Link to="/search/properties" className="block py-1 hover:text-primary">Properties</Link>
+              <Link to="/search" className="block py-1 hover:text-primary">Properties</Link>
             </li>
             <li onClick={handleClick}>
-              <Link to="/search/for-rent" className="block py-1 hover:text-primary">Rent Property</Link>
+              <Link to="/search?purpose=for-rent" className="block py-1 hover:text-primary">Rent Property</Link>
             </li>
             <li onClick={handleClick}>
-              <Link to="/search/for-sale" className="block py-1 hover:text-primary">Sale Property</Link>
+              <Link to="/search/?purpose=for-sale" className="block py-1 hover:text-primary">Sale Property</Link>
             </li>
           </ul>
           <button onClick={handleClick} className='bg-black w-1/5 opacity-50'>close</button>
@@ -43,13 +43,13 @@ const Navbar = () => {
         <div className="hidden w-full md:block md:w-auto">
           <ul className="flex gap-3 font-semibold text-sm text-gray-500">
             <li>
-              <Link to="/search/properties" className="block py-1 hover:text-primary">Properties</Link>
+              <Link to="/search" className="block py-1 hover:text-primary">Properties</Link>
             </li>
             <li>
-              <Link to="/search/for-rent" className="block py-1 hover:text-primary">Rent Property</Link>
+              <Link to="/search?purpose=for-rent" className="block py-1 hover:text-primary">Rent Property</Link>
             </li>
             <li>
-              <Link to="/search/for-sale" className="block py-1 hover:text-primary">Sale Property</Link>
+              <Link to="/search?purpose=for-sale" className="block py-1 hover:text-primary">Sale Property</Link>
             </li>
           </ul>
         </div>
