@@ -11,7 +11,7 @@ const ExploreBannerCard = ({ image, title, btnLabel, link }) => {
         <div className="p-3">
           <h2 className="text-xl font-bold my-3">{title}</h2>
           <Button css='bg-primary text-white'>
-              <Link to={`search/${link}`}>{btnLabel}</Link>
+              <Link to={`/search?purpose=${link}`}>{btnLabel}</Link>
           </Button>
         </div>
     </div>

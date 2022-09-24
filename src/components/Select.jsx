@@ -1,16 +1,15 @@
-import React from 'react'
-
-const Select = ({ data, title }) => {
+const Select = ({ children, label, onChange, value }) => {
   return (
-    <>
-        <select className="bg-primary-light text-primary rounded px-2 py-1 outline-none capitalize flex-1">
-            <option selected>{title}</option>
-            <option value="US">United States</option>
-            <option value="CA">Canada</option>
-            <option value="FR">France</option>
-            <option value="DE">Germany</option>
+    <div className="flex flex-col capitalize flex-1">
+        <label className="text-gray-500 text-sm" for={label}>{label}</label>
+        <select 
+          id={label}
+          onChange={onChange}
+          className="bg-primary-light text-primary rounded px-2 py-1 outline-none"
+        >
+          {children}
         </select>
-    </>
+    </div>
   )
 }
 
